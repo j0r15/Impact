@@ -53,10 +53,10 @@ Put your SD in the RPi and give it power.
 
 Now find it on the network using:
 ~~~
-sudo nmap -sP 192.168.5.1-254
+sudo nmap -sP 192.168.1.*
 
-sudo nmap -sP 192.168.5.1-254 | grep -B 2 'B8:27:EB:1A:81:71'
-sudo nmap -sP 192.168.11.1-254 | grep -B 2 'B8:27:EB:1A:81:71'
+sudo nmap -sP 192.168.5.* | grep -B 2 'B8:27:EB:1A:81:71'
+sudo nmap -sP 192.168.11.* | grep -B 2 'B8:27:EB:1A:81:71'
 ~~~
 
 Connect to it
@@ -121,9 +121,9 @@ defaults.pcm.card 1
 ~~~
 
 ### MOSQUITTO
-
+~~~
 sudo apt-get install mosquitto mosquitto-clients
-
+~~~
 
 ### Make RPI an Access Point
 
@@ -249,7 +249,7 @@ sudo iptables -t nat -A POSTROUTING -o wlan0 -j MASQUERADE
 sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 ~~~
 
-Make IP tables permanent
+Make IP tables permanent (check if structure works)
 
 ~~~
 sudo nano /etc/rc.local
