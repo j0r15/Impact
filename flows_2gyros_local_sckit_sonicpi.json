@@ -1,0 +1,4663 @@
+[
+    {
+        "id": "fc2fa622.557b98",
+        "type": "tab",
+        "label": "IN",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "33a05456.7ec3cc",
+        "type": "tab",
+        "label": "Sculpting",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "586ca96d.c55028",
+        "type": "tab",
+        "label": "OUT",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "943f7536.dd2d58",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "SmartCitizen",
+        "broker": "mqtt.smartcitizen.me",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "bcd734ff.49c488",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "RPI",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "26bbac1d.813764",
+        "type": "ui_tab",
+        "z": "",
+        "name": "Control",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b320458d.b6c348",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#000000",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "9f92142c.0c7d88",
+        "type": "ui_group",
+        "z": "",
+        "name": "Factor",
+        "tab": "26bbac1d.813764",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "7fb2daa8.06b9c4",
+        "type": "ui_tab",
+        "z": "",
+        "name": "DMX",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b81eb4b0.c3f5a8",
+        "type": "ui_group",
+        "z": "",
+        "name": "Offset",
+        "tab": "26bbac1d.813764",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "b4c8dce7.14d93",
+        "type": "ui_group",
+        "z": "",
+        "name": "RECORD PRESETS",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "41982a9b.5af0e4",
+        "type": "ui_group",
+        "z": "",
+        "name": "IN Value",
+        "tab": "26bbac1d.813764",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "71e4ed09.f6dea4",
+        "type": "ui_group",
+        "z": "",
+        "name": "DMX SLIDERS",
+        "tab": "7fb2daa8.06b9c4",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": true
+    },
+    {
+        "id": "db9832a0.5f508",
+        "type": "ui_group",
+        "z": "",
+        "name": "Sound",
+        "tab": "26bbac1d.813764",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4dd9137b.5dc22c",
+        "type": "ui_group",
+        "z": "",
+        "name": "OUT value",
+        "tab": "26bbac1d.813764",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c75649ee.b572e8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "41982a9b.5af0e4",
+        "order": 9,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "e54845b2.1e1fb8",
+        "type": "mqtt in",
+        "z": "fc2fa622.557b98",
+        "name": "",
+        "topic": "device/sck/123456/readings",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "943f7536.dd2d58",
+        "x": 240,
+        "y": 180,
+        "wires": [
+            [
+                "a86415ad.be3388",
+                "c7c4e316.09668"
+            ]
+        ]
+    },
+    {
+        "id": "a86415ad.be3388",
+        "type": "debug",
+        "z": "fc2fa622.557b98",
+        "name": "FULL DUMP",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 550,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c7c4e316.09668",
+        "type": "function",
+        "z": "fc2fa622.557b98",
+        "name": "READINGS",
+        "func": "var temp = msg.payload.data[0].sensors[0].value;\nvar hum = msg.payload.data[0].sensors[1].value;\nvar light = msg.payload.data[0].sensors[3].value;\nvar noise = msg.payload.data[0].sensors[4].value;\nvar press = msg.payload.data[0].sensors[5].value;\nvar pmone = msg.payload.data[0].sensors[6].value;\nvar pmtwo = msg.payload.data[0].sensors[7].value;\nvar pmten = msg.payload.data[0].sensors[8].value;\n\nmsg.topic = \"value\";\n\nreturn [{payload:temp},{payload:hum},{payload:light},{payload:noise},{payload:press},{payload:pmone},{payload:pmtwo},{payload:pmten}];",
+        "outputs": 8,
+        "noerr": 0,
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "e6819512.5c26f8",
+                "724a83ea.47dd4c"
+            ],
+            [
+                "a5581862.afacf8"
+            ],
+            [
+                "8ff768b2.3b39c8"
+            ],
+            [
+                "82a23b50.981ba8"
+            ],
+            [
+                "12022292.cad9cd"
+            ],
+            [
+                "1489c7a.c772638"
+            ],
+            [
+                "eda647fd.ec3b18"
+            ],
+            [
+                "ebf07a0e.51bf08"
+            ]
+        ]
+    },
+    {
+        "id": "e6819512.5c26f8",
+        "type": "debug",
+        "z": "fc2fa622.557b98",
+        "name": "TEMPERATURE",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 770,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "50cd32e3.bfdbbc",
+        "type": "mqtt out",
+        "z": "fc2fa622.557b98",
+        "name": "Temperature",
+        "topic": "temp",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1070,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "806daa6c.c23fa8",
+        "type": "mqtt out",
+        "z": "fc2fa622.557b98",
+        "name": "Humidity",
+        "topic": "hum",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1060,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "87b8b8ae.a8d7e8",
+        "type": "mqtt out",
+        "z": "fc2fa622.557b98",
+        "name": "Light",
+        "topic": "light",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1050,
+        "y": 837,
+        "wires": []
+    },
+    {
+        "id": "54009aa8.5716b4",
+        "type": "mqtt out",
+        "z": "fc2fa622.557b98",
+        "name": "Noise",
+        "topic": "noise",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1050,
+        "y": 892,
+        "wires": []
+    },
+    {
+        "id": "718aeb44.f3b614",
+        "type": "mqtt out",
+        "z": "fc2fa622.557b98",
+        "name": "Pressure",
+        "topic": "press",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1060,
+        "y": 948,
+        "wires": []
+    },
+    {
+        "id": "cff293c3.8a3b4",
+        "type": "mqtt out",
+        "z": "fc2fa622.557b98",
+        "name": "PM1",
+        "topic": "pmone",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1050,
+        "y": 1003,
+        "wires": []
+    },
+    {
+        "id": "8a650a53.352208",
+        "type": "mqtt out",
+        "z": "fc2fa622.557b98",
+        "name": "PM2.5",
+        "topic": "pmtwo",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1050,
+        "y": 1063,
+        "wires": []
+    },
+    {
+        "id": "f9115179.14c2b",
+        "type": "mqtt out",
+        "z": "fc2fa622.557b98",
+        "name": "PM10",
+        "topic": "pmten",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1050,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "724a83ea.47dd4c",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "temp",
+        "links": [
+            "2fffb5a3.a5caaa"
+        ],
+        "x": 1030,
+        "y": 200,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "a5581862.afacf8",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "hum",
+        "links": [
+            "3cb6631b.82203c"
+        ],
+        "x": 1030.0000019073486,
+        "y": 243.75000381469727,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "8ff768b2.3b39c8",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "light",
+        "links": [
+            "3ee94adc.629d06"
+        ],
+        "x": 1030.0000019073486,
+        "y": 283.75000381469727,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "82a23b50.981ba8",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "noise",
+        "links": [
+            "ca026521.28d898"
+        ],
+        "x": 1032.500005722046,
+        "y": 332.50001335144043,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "634116c9.933f88",
+        "type": "udp out",
+        "z": "586ca96d.c55028",
+        "name": "",
+        "addr": "192.168.5.27",
+        "iface": "",
+        "port": "4559",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 890,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7be59f1f.aa539",
+        "type": "osc",
+        "z": "586ca96d.c55028",
+        "name": "",
+        "path": "",
+        "metadata": false,
+        "x": 710,
+        "y": 140,
+        "wires": [
+            [
+                "634116c9.933f88"
+            ]
+        ]
+    },
+    {
+        "id": "2d108c6c.3b0354",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "Sonic Pi Laptop",
+        "links": [
+            "b8cc9f51.6e55"
+        ],
+        "x": 460,
+        "y": 140,
+        "wires": [
+            [
+                "7be59f1f.aa539"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "d799e7a6.d8b218",
+        "type": "comment",
+        "z": "586ca96d.c55028",
+        "name": "Sonic-Pi",
+        "info": "",
+        "x": 660,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "64b3ced4.ad486",
+        "type": "mqtt out",
+        "z": "33a05456.7ec3cc",
+        "name": "tempval",
+        "topic": "tempvalb",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1420,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "68b673c5.28086c",
+        "type": "mqtt out",
+        "z": "33a05456.7ec3cc",
+        "name": "humval",
+        "topic": "humvalb",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1420,
+        "y": 1172,
+        "wires": []
+    },
+    {
+        "id": "d415603.7c98ba",
+        "type": "mqtt out",
+        "z": "33a05456.7ec3cc",
+        "name": "lightval",
+        "topic": "lightvalb",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1421,
+        "y": 1224,
+        "wires": []
+    },
+    {
+        "id": "7fa8c035.40055",
+        "type": "mqtt out",
+        "z": "33a05456.7ec3cc",
+        "name": "noiseval",
+        "topic": "noisevalb",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1419,
+        "y": 1273,
+        "wires": []
+    },
+    {
+        "id": "7e181a1a.655264",
+        "type": "mqtt out",
+        "z": "33a05456.7ec3cc",
+        "name": "pressval",
+        "topic": "pressvalb",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1420,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "a74ddde6.9a141",
+        "type": "mqtt out",
+        "z": "33a05456.7ec3cc",
+        "name": "pressval",
+        "topic": "pressvalv",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1280,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "46f132ce.607b5c",
+        "type": "ui_numeric",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Pressfactor",
+        "tooltip": "",
+        "group": "9f92142c.0c7d88",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "step": "0.1",
+        "x": 730,
+        "y": 1200,
+        "wires": [
+            [
+                "a660a66.2159158"
+            ]
+        ]
+    },
+    {
+        "id": "e4ec860a.bb4748",
+        "type": "ui_numeric",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Noisefactor",
+        "tooltip": "",
+        "group": "9f92142c.0c7d88",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "step": "0.1",
+        "x": 730,
+        "y": 1160,
+        "wires": [
+            [
+                "3691d3f2.05ef0c"
+            ]
+        ]
+    },
+    {
+        "id": "f1dda6a7.8ea8f8",
+        "type": "mqtt out",
+        "z": "33a05456.7ec3cc",
+        "name": "noiseval",
+        "topic": "noisevalv",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1279,
+        "y": 1273,
+        "wires": []
+    },
+    {
+        "id": "1f0e8615.6049aa",
+        "type": "mqtt out",
+        "z": "33a05456.7ec3cc",
+        "name": "lightval",
+        "topic": "lightvalv",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1281,
+        "y": 1224,
+        "wires": []
+    },
+    {
+        "id": "76d49f30.98bd3",
+        "type": "ui_numeric",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Lightfactor",
+        "tooltip": "",
+        "group": "9f92142c.0c7d88",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "step": "0.1",
+        "x": 730,
+        "y": 1120,
+        "wires": [
+            [
+                "e621a78.c5d0458"
+            ]
+        ]
+    },
+    {
+        "id": "92c12ff6.a3431",
+        "type": "ui_numeric",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Humfactor",
+        "tooltip": "",
+        "group": "9f92142c.0c7d88",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "step": "0.1",
+        "x": 730,
+        "y": 1080,
+        "wires": [
+            [
+                "3830c282.5a960e"
+            ]
+        ]
+    },
+    {
+        "id": "5e917c4.f3c1384",
+        "type": "mqtt out",
+        "z": "33a05456.7ec3cc",
+        "name": "humval",
+        "topic": "humvalv",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1280,
+        "y": 1172,
+        "wires": []
+    },
+    {
+        "id": "ae6cae72.db4ef",
+        "type": "mqtt out",
+        "z": "33a05456.7ec3cc",
+        "name": "tempval",
+        "topic": "tempvalv",
+        "qos": "0",
+        "retain": "",
+        "broker": "bcd734ff.49c488",
+        "x": 1280,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "1fcb6769.7d4af9",
+        "type": "ui_numeric",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Tempfactor",
+        "tooltip": "",
+        "group": "9f92142c.0c7d88",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "step": "0.1",
+        "x": 730,
+        "y": 1040,
+        "wires": [
+            [
+                "14c37236.d97b4e"
+            ]
+        ]
+    },
+    {
+        "id": "7f26470b.e78618",
+        "type": "udp in",
+        "z": "fc2fa622.557b98",
+        "name": "",
+        "iface": "",
+        "port": "3001",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "utf8",
+        "x": 1240,
+        "y": 840,
+        "wires": [
+            [
+                "9cf8a772.5c59f8"
+            ]
+        ]
+    },
+    {
+        "id": "5b225b3d.ef5714",
+        "type": "function",
+        "z": "fc2fa622.557b98",
+        "name": "Split",
+        "func": " var output = msg.payload.split(\" \");\n \n var chan1 = parseInt(output[0]);\n var chan2 = parseInt(output[1]);\n var chan3 = parseInt(output[2]);\n var chan4 = parseInt(output[3]);\n \n return [{payload:chan1},{payload:chan2},{payload:chan3},{payload:chan4}];",
+        "outputs": 4,
+        "noerr": 0,
+        "x": 1551.2500038146973,
+        "y": 840.0000009536743,
+        "wires": [
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9cf8a772.5c59f8",
+        "type": "delay",
+        "z": "fc2fa622.557b98",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "10",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 1400,
+        "y": 840,
+        "wires": [
+            [
+                "5b225b3d.ef5714"
+            ]
+        ]
+    },
+    {
+        "id": "5de93f35.09582",
+        "type": "comment",
+        "z": "fc2fa622.557b98",
+        "name": "Accelerometer (PureData)",
+        "info": "",
+        "x": 1290,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "f0ef70a7.e847f",
+        "type": "comment",
+        "z": "fc2fa622.557b98",
+        "name": "SmartCitizenKit",
+        "info": "",
+        "x": 200,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "2ccd98fe.e59328",
+        "type": "ui_slider",
+        "z": "586ca96d.c55028",
+        "name": "DMX2",
+        "label": "DMX 2",
+        "tooltip": "",
+        "group": "71e4ed09.f6dea4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 330,
+        "y": 540,
+        "wires": [
+            [
+                "b4c7a6e0.964f48",
+                "bc3d6c15.27bb9"
+            ]
+        ]
+    },
+    {
+        "id": "dc249b25.23a088",
+        "type": "ui_slider",
+        "z": "586ca96d.c55028",
+        "name": "DMX12",
+        "label": "DMX 12",
+        "tooltip": "",
+        "group": "71e4ed09.f6dea4",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 340,
+        "y": 940,
+        "wires": [
+            [
+                "68eeccf1.a70684",
+                "bc3d6c15.27bb9"
+            ]
+        ]
+    },
+    {
+        "id": "dfc15c5e.708e2",
+        "type": "ui_slider",
+        "z": "586ca96d.c55028",
+        "name": "DMX11",
+        "label": "DMX 11",
+        "tooltip": "",
+        "group": "71e4ed09.f6dea4",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 340,
+        "y": 900,
+        "wires": [
+            [
+                "dea20758.e8d3a8",
+                "bc3d6c15.27bb9"
+            ]
+        ]
+    },
+    {
+        "id": "c7f48788.5a8dd8",
+        "type": "ui_slider",
+        "z": "586ca96d.c55028",
+        "name": "DMX10",
+        "label": "DMX 10",
+        "tooltip": "",
+        "group": "71e4ed09.f6dea4",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 340,
+        "y": 860,
+        "wires": [
+            [
+                "cecb3900.f6e168",
+                "bc3d6c15.27bb9"
+            ]
+        ]
+    },
+    {
+        "id": "4acc1ea6.a8c69",
+        "type": "ui_slider",
+        "z": "586ca96d.c55028",
+        "name": "DMX9",
+        "label": "DMX 9",
+        "tooltip": "",
+        "group": "71e4ed09.f6dea4",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 330,
+        "y": 820,
+        "wires": [
+            [
+                "bc0abdd1.3b4c3",
+                "bc3d6c15.27bb9"
+            ]
+        ]
+    },
+    {
+        "id": "e0dd3cdb.eae9b",
+        "type": "ui_slider",
+        "z": "586ca96d.c55028",
+        "name": "DMX8",
+        "label": "DMX 8",
+        "tooltip": "",
+        "group": "71e4ed09.f6dea4",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 330,
+        "y": 780,
+        "wires": [
+            [
+                "f2a375fd.32dab8",
+                "bc3d6c15.27bb9"
+            ]
+        ]
+    },
+    {
+        "id": "648e959.acf336c",
+        "type": "ui_slider",
+        "z": "586ca96d.c55028",
+        "name": "DMX7",
+        "label": "DMX 7",
+        "tooltip": "",
+        "group": "71e4ed09.f6dea4",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 330,
+        "y": 740,
+        "wires": [
+            [
+                "a6d24953.884e58",
+                "bc3d6c15.27bb9"
+            ]
+        ]
+    },
+    {
+        "id": "a7563483.dfce58",
+        "type": "ui_slider",
+        "z": "586ca96d.c55028",
+        "name": "DMX6",
+        "label": "DMX 6",
+        "tooltip": "",
+        "group": "71e4ed09.f6dea4",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 330,
+        "y": 700,
+        "wires": [
+            [
+                "aae38581.075a18",
+                "bc3d6c15.27bb9"
+            ]
+        ]
+    },
+    {
+        "id": "cdcc98d9.d65ea8",
+        "type": "ui_slider",
+        "z": "586ca96d.c55028",
+        "name": "DMX5",
+        "label": "DMX 5",
+        "tooltip": "",
+        "group": "71e4ed09.f6dea4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 330,
+        "y": 660,
+        "wires": [
+            [
+                "a5a65b0b.89d728",
+                "bc3d6c15.27bb9"
+            ]
+        ]
+    },
+    {
+        "id": "14704d8.b9f4db3",
+        "type": "ui_slider",
+        "z": "586ca96d.c55028",
+        "name": "DMX4",
+        "label": "DMX 4",
+        "tooltip": "",
+        "group": "71e4ed09.f6dea4",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "cf1cf52a.1de098",
+                "bc3d6c15.27bb9"
+            ]
+        ]
+    },
+    {
+        "id": "f985406a.23ef",
+        "type": "ui_slider",
+        "z": "586ca96d.c55028",
+        "name": "DMX3",
+        "label": "DMX 3",
+        "tooltip": "",
+        "group": "71e4ed09.f6dea4",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 330,
+        "y": 580,
+        "wires": [
+            [
+                "ef2d00cd.2cadb",
+                "bc3d6c15.27bb9"
+            ]
+        ]
+    },
+    {
+        "id": "3d670f8c.0d07c",
+        "type": "change",
+        "z": "586ca96d.c55028",
+        "name": "save to Global DMX1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dmx_preset[0]",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b4c7a6e0.964f48",
+        "type": "change",
+        "z": "586ca96d.c55028",
+        "name": "save to Global DMX2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dmx_preset[1]",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ef2d00cd.2cadb",
+        "type": "change",
+        "z": "586ca96d.c55028",
+        "name": "save to Global DMX3",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dmx_preset[2]",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cf1cf52a.1de098",
+        "type": "change",
+        "z": "586ca96d.c55028",
+        "name": "save to Global DMX4",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dmx_preset[3]",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5a65b0b.89d728",
+        "type": "change",
+        "z": "586ca96d.c55028",
+        "name": "save to Global DMX5",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dmx_preset[4]",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aae38581.075a18",
+        "type": "change",
+        "z": "586ca96d.c55028",
+        "name": "save to Global DMX6",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dmx_preset[5]",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a6d24953.884e58",
+        "type": "change",
+        "z": "586ca96d.c55028",
+        "name": "save to Global DMX7",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dmx_preset[6]",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f2a375fd.32dab8",
+        "type": "change",
+        "z": "586ca96d.c55028",
+        "name": "save to Global DMX8",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dmx_preset[7]",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc0abdd1.3b4c3",
+        "type": "change",
+        "z": "586ca96d.c55028",
+        "name": "save to Global DMX9",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dmx_preset[8]",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cecb3900.f6e168",
+        "type": "change",
+        "z": "586ca96d.c55028",
+        "name": "save to Global DMX10",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dmx_preset[9]",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dea20758.e8d3a8",
+        "type": "change",
+        "z": "586ca96d.c55028",
+        "name": "save to Global DMX11",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dmx_preset[10]",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 900,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "68eeccf1.a70684",
+        "type": "change",
+        "z": "586ca96d.c55028",
+        "name": "save to Global DMX12",
+        "rules": [
+            {
+                "t": "set",
+                "p": "dmx_preset[11]",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bc3d6c15.27bb9",
+        "type": "function",
+        "z": "586ca96d.c55028",
+        "name": "Send Current Universe",
+        "func": "msg.payload = global.get(\"dmx_preset\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 760,
+        "y": 720,
+        "wires": [
+            [
+                "220c235f.95f41c",
+                "316d09cc.4c19c6"
+            ]
+        ]
+    },
+    {
+        "id": "316d09cc.4c19c6",
+        "type": "dmxusbpro",
+        "z": "586ca96d.c55028",
+        "name": "",
+        "port": "/dev/ttyUSB0",
+        "DMX_starting_address": "1",
+        "x": 988,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "220c235f.95f41c",
+        "type": "debug",
+        "z": "586ca96d.c55028",
+        "name": "Current Preset",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 987,
+        "y": 744,
+        "wires": []
+    },
+    {
+        "id": "ac09af7f.250ef",
+        "type": "ui_slider",
+        "z": "586ca96d.c55028",
+        "name": "DMX1",
+        "label": "DMX 1",
+        "tooltip": "",
+        "group": "71e4ed09.f6dea4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "Slider",
+        "min": 0,
+        "max": "255",
+        "step": 1,
+        "x": 330,
+        "y": 500,
+        "wires": [
+            [
+                "3d670f8c.0d07c",
+                "bc3d6c15.27bb9"
+            ]
+        ]
+    },
+    {
+        "id": "f7c430f3.8c33c",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "DMX 1",
+        "links": [
+            "f058c181.f528"
+        ],
+        "x": 235,
+        "y": 500,
+        "wires": [
+            [
+                "ac09af7f.250ef"
+            ]
+        ]
+    },
+    {
+        "id": "64145680.4fb3f8",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "DMX 2",
+        "links": [
+            "1f91156b.7c929b"
+        ],
+        "x": 235,
+        "y": 540,
+        "wires": [
+            [
+                "2ccd98fe.e59328"
+            ]
+        ]
+    },
+    {
+        "id": "70ae52a.ae89bac",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "DMX 3",
+        "links": [
+            "7c32dfcf.5693c"
+        ],
+        "x": 235,
+        "y": 580,
+        "wires": [
+            [
+                "f985406a.23ef"
+            ]
+        ]
+    },
+    {
+        "id": "73d90622.1b30e8",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "DMX4",
+        "links": [
+            "66ae0070.e6398"
+        ],
+        "x": 235,
+        "y": 620,
+        "wires": [
+            [
+                "14704d8.b9f4db3"
+            ]
+        ]
+    },
+    {
+        "id": "ce3a11a1.ac70a",
+        "type": "comment",
+        "z": "586ca96d.c55028",
+        "name": "DMX",
+        "info": "",
+        "x": 272.50000762939453,
+        "y": 451.2500057220459,
+        "wires": []
+    },
+    {
+        "id": "a66a5156.0d9b1",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "DMX 5",
+        "links": [
+            "ddffcfc9.a0065"
+        ],
+        "x": 235,
+        "y": 660,
+        "wires": [
+            [
+                "cdcc98d9.d65ea8"
+            ]
+        ]
+    },
+    {
+        "id": "e66d5af7.5b0568",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "DMX 6",
+        "links": [
+            "675e722b.eed32c"
+        ],
+        "x": 235,
+        "y": 700,
+        "wires": [
+            [
+                "a7563483.dfce58"
+            ]
+        ]
+    },
+    {
+        "id": "d6705d2d.187d",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "DMX 7",
+        "links": [
+            "7047137b.b59bdc"
+        ],
+        "x": 235,
+        "y": 740,
+        "wires": [
+            [
+                "648e959.acf336c"
+            ]
+        ]
+    },
+    {
+        "id": "ed9723bb.26e19",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "DMX 8",
+        "links": [
+            "760cc0d7.24b65"
+        ],
+        "x": 235,
+        "y": 780,
+        "wires": [
+            [
+                "e0dd3cdb.eae9b"
+            ]
+        ]
+    },
+    {
+        "id": "edbeb037.c45fd",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "DMX 9",
+        "links": [
+            "7420b28c.129a4c"
+        ],
+        "x": 235,
+        "y": 820,
+        "wires": [
+            [
+                "4acc1ea6.a8c69"
+            ]
+        ]
+    },
+    {
+        "id": "aa515a33.232128",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "DMX 10",
+        "links": [
+            "5ab78e7.78de37"
+        ],
+        "x": 235,
+        "y": 860,
+        "wires": [
+            [
+                "c7f48788.5a8dd8"
+            ]
+        ]
+    },
+    {
+        "id": "aace29b.7ba99d8",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "DMX 11",
+        "links": [
+            "4712e1d.9d30f2"
+        ],
+        "x": 235,
+        "y": 900,
+        "wires": [
+            [
+                "dfc15c5e.708e2"
+            ]
+        ]
+    },
+    {
+        "id": "61a65383.55d04c",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "DMX 12",
+        "links": [
+            "7fda65e6.ce3d2c"
+        ],
+        "x": 235,
+        "y": 940,
+        "wires": [
+            [
+                "dc249b25.23a088"
+            ]
+        ]
+    },
+    {
+        "id": "2fffb5a3.a5caaa",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "temp carrier",
+        "links": [
+            "724a83ea.47dd4c",
+            "12022292.cad9cd"
+        ],
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "8cd4fd65.00fea"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "3cb6631b.82203c",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "hum carrier",
+        "links": [
+            "a5581862.afacf8"
+        ],
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "296eec02.e3e294"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "3ee94adc.629d06",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "light carrier",
+        "links": [
+            "8ff768b2.3b39c8"
+        ],
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "9d0f359.cb90dc8"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "ca026521.28d898",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "noise carrier",
+        "links": [
+            "82a23b50.981ba8",
+            "ebf07a0e.51bf08",
+            "553548d8.145148"
+        ],
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "749908a8.d97648"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "b8cc9f51.6e55",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "Sonic Pi on Laptop",
+        "links": [
+            "2d108c6c.3b0354"
+        ],
+        "x": 1210,
+        "y": 100,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "f058c181.f528",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "DMX 1",
+        "links": [
+            "f7c430f3.8c33c"
+        ],
+        "x": 1170,
+        "y": 200,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1f91156b.7c929b",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "DMX 2",
+        "links": [
+            "64145680.4fb3f8"
+        ],
+        "x": 1170,
+        "y": 240,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "7c32dfcf.5693c",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "DMX 3",
+        "links": [
+            "70ae52a.ae89bac"
+        ],
+        "x": 1170,
+        "y": 280,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "66ae0070.e6398",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "DMX 4",
+        "links": [
+            "73d90622.1b30e8"
+        ],
+        "x": 1170,
+        "y": 320,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "ddffcfc9.a0065",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "DMX 5",
+        "links": [
+            "a66a5156.0d9b1"
+        ],
+        "x": 1170,
+        "y": 360,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "675e722b.eed32c",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "DMX 6",
+        "links": [
+            "e66d5af7.5b0568"
+        ],
+        "x": 1170,
+        "y": 400,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "7047137b.b59bdc",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "DMX 7",
+        "links": [
+            "d6705d2d.187d"
+        ],
+        "x": 1170,
+        "y": 440,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "760cc0d7.24b65",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "DMX 8",
+        "links": [
+            "ed9723bb.26e19"
+        ],
+        "x": 1170,
+        "y": 480,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "7420b28c.129a4c",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "DMX 9",
+        "links": [
+            "edbeb037.c45fd"
+        ],
+        "x": 1170,
+        "y": 520,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "5ab78e7.78de37",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "DMX 10",
+        "links": [
+            "aa515a33.232128"
+        ],
+        "x": 1180,
+        "y": 560,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "4712e1d.9d30f2",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "DMX 11",
+        "links": [
+            "aace29b.7ba99d8"
+        ],
+        "x": 1180,
+        "y": 600,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "7fda65e6.ce3d2c",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "DMX 12",
+        "links": [
+            "61a65383.55d04c"
+        ],
+        "x": 1180,
+        "y": 640,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "a3fd7c51.78d6d",
+        "type": "comment",
+        "z": "fc2fa622.557b98",
+        "name": "Pure data (old)",
+        "info": "",
+        "x": 1080,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "12022292.cad9cd",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "press",
+        "links": [
+            "2fffb5a3.a5caaa",
+            "e8a2d5ee.2b39a8"
+        ],
+        "x": 1024.9999828338623,
+        "y": 383.7499942779541,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "1489c7a.c772638",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "pm1",
+        "links": [
+            "41cafa89.63fea4"
+        ],
+        "x": 1024.999984741211,
+        "y": 427.49999809265137,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "eda647fd.ec3b18",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "pm2.5",
+        "links": [
+            "a4971e93.1b18"
+        ],
+        "x": 1024.999984741211,
+        "y": 467.49999809265137,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "ebf07a0e.51bf08",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "pm10",
+        "links": [
+            "ca026521.28d898",
+            "7a52a325.e1892c"
+        ],
+        "x": 1027.4999885559082,
+        "y": 516.2500076293945,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "e8a2d5ee.2b39a8",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "press carrier",
+        "links": [
+            "12022292.cad9cd"
+        ],
+        "x": 190,
+        "y": 320,
+        "wires": [
+            [
+                "dbf6c14d.a2114"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "41cafa89.63fea4",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "pm1 carrier",
+        "links": [
+            "1489c7a.c772638"
+        ],
+        "x": 190,
+        "y": 360,
+        "wires": [
+            [
+                "dc0b9ce6.ebf96"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "a4971e93.1b18",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "pm2.5 carrier",
+        "links": [
+            "eda647fd.ec3b18"
+        ],
+        "x": 190,
+        "y": 400,
+        "wires": [
+            [
+                "f892f3fe.e6c84"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "7a52a325.e1892c",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "pm10 carrier",
+        "links": [
+            "ebf07a0e.51bf08",
+            "553548d8.145148"
+        ],
+        "x": 190,
+        "y": 440,
+        "wires": [
+            [
+                "709fd6a8.9cb7a8"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "44358a89.52b874",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply",
+        "func": "var one = global.get(\"tempfac\")\nvar two = global.get(\"tempoff\")\nbbal = (msg.payload + two) * one;\nbbbal = bbal.toFixed(0);\nmsg.payload = parseInt(bbbal);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 160,
+        "wires": [
+            [
+                "8a87ed04.1d3a"
+            ]
+        ]
+    },
+    {
+        "id": "14c37236.d97b4e",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to tempfac",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tempfac",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bf5fec97.0b1a4",
+        "type": "comment",
+        "z": "33a05456.7ec3cc",
+        "name": "Puredata (old)",
+        "info": "",
+        "x": 1290,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "3830c282.5a960e",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to humfac",
+        "rules": [
+            {
+                "t": "set",
+                "p": "humfac",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e621a78.c5d0458",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to lightfac",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lightfac",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3691d3f2.05ef0c",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to noisefac",
+        "rules": [
+            {
+                "t": "set",
+                "p": "noisefac",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a660a66.2159158",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to pressfac",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pressfac",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8a78388e.bfc528",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to tempoff",
+        "rules": [
+            {
+                "t": "set",
+                "p": "tempoff",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 1040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f8eedcf7.a5fb",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to humoff",
+        "rules": [
+            {
+                "t": "set",
+                "p": "humoff",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88ee2ff5.68f7c",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to lightoff",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lightoff",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 1120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3e0ec09c.de08b",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to noiseoff",
+        "rules": [
+            {
+                "t": "set",
+                "p": "noiseoff",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f09cd08d.082c6",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to pressoff",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pressoff",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "363a2a71.c174d6",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply humfacoff",
+        "func": "var one = global.get(\"humfac\")\nvar two = global.get(\"humoff\")\nmsg.payload = (msg.payload + two) * one;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 200,
+        "wires": [
+            [
+                "cadcafa6.e35bd"
+            ]
+        ]
+    },
+    {
+        "id": "ad63004.be3e1",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply lightfacoff",
+        "func": "var one = global.get(\"lightfac\")\nvar two = global.get(\"lightoff\")\nmsg.payload = (msg.payload + two) * one;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 240,
+        "wires": [
+            [
+                "e13218f1.745cc8"
+            ]
+        ]
+    },
+    {
+        "id": "39dad2e8.f2ffae",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply noisefacoff",
+        "func": "var one = global.get(\"noisefac\")\nvar two = global.get(\"noiseoff\")\nmsg.payload = (msg.payload + two) * one;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 280,
+        "wires": [
+            [
+                "6de31c8c.ad9904"
+            ]
+        ]
+    },
+    {
+        "id": "4114b034.0c0bc",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply pressfacoff",
+        "func": "var one = global.get(\"pressfac\")\nvar two = global.get(\"pressoff\")\nmsg.payload = (msg.payload + two) * one;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 320,
+        "wires": [
+            [
+                "20141b5a.6a9e84"
+            ]
+        ]
+    },
+    {
+        "id": "bcb6f339.d8641",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply pmonefacoff",
+        "func": "var one = global.get(\"pmonefac\")\nvar two = global.get(\"pmoneoff\")\nmsg.payload = (msg.payload + two) * one;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 600,
+        "y": 360,
+        "wires": [
+            [
+                "a168c90.b944c38"
+            ]
+        ]
+    },
+    {
+        "id": "76658318.19183c",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply pmtwofivefacoff",
+        "func": "var one = global.get(\"pmtwofivefac\")\nvar two = global.get(\"pmtwofiveoff\")\nmsg.payload = (msg.payload + two) * one;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 400,
+        "wires": [
+            [
+                "46f152da.a0aebc"
+            ]
+        ]
+    },
+    {
+        "id": "a61d40d9.f68dc",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply pmtenfacoff",
+        "func": "var one = global.get(\"pmtenfac\")\nvar two = global.get(\"pmtenoff\")\nmsg.payload = (msg.payload + two) * one;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 440,
+        "wires": [
+            [
+                "782c0c9.e87f9f4"
+            ]
+        ]
+    },
+    {
+        "id": "14abd863.16ec08",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to pmoneoff",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pmoneoff",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a483983d.e1ddd8",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to pmtwofiveoff",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pmtwofiveoff",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f6d0888d.fa5148",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to pmtenoff",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pmtenoff",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b39c0fe7.2392",
+        "type": "ui_numeric",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Pm10factor",
+        "tooltip": "",
+        "group": "9f92142c.0c7d88",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "step": "0.1",
+        "x": 730,
+        "y": 1320,
+        "wires": [
+            [
+                "1046b457.6ffcac"
+            ]
+        ]
+    },
+    {
+        "id": "16a00045.17849",
+        "type": "ui_numeric",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Pm2.5factor",
+        "tooltip": "",
+        "group": "9f92142c.0c7d88",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "step": "0.1",
+        "x": 730,
+        "y": 1280,
+        "wires": [
+            [
+                "23821d13.559412"
+            ]
+        ]
+    },
+    {
+        "id": "b23a562e.59dbc8",
+        "type": "ui_numeric",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Pm1factor",
+        "tooltip": "",
+        "group": "9f92142c.0c7d88",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "step": "0.1",
+        "x": 730,
+        "y": 1240,
+        "wires": [
+            [
+                "18849579.249e4b"
+            ]
+        ]
+    },
+    {
+        "id": "18849579.249e4b",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to pmonefac",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pmonefac",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 1240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "23821d13.559412",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to pmtwofivefac",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pmtwofivefac",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1046b457.6ffcac",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to pressfac",
+        "rules": [
+            {
+                "t": "set",
+                "p": "pmtenfac",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 1320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ef67405b.15b33",
+        "type": "comment",
+        "z": "33a05456.7ec3cc",
+        "name": "Dashboard interface Offset and Factor",
+        "info": "",
+        "x": 430,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "234eeb22.846fa4",
+        "type": "udp in",
+        "z": "fc2fa622.557b98",
+        "name": "",
+        "iface": "",
+        "port": "8000",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 100,
+        "y": 600,
+        "wires": [
+            [
+                "8f1db323.f653f"
+            ]
+        ]
+    },
+    {
+        "id": "8f1db323.f653f",
+        "type": "osc",
+        "z": "fc2fa622.557b98",
+        "name": "",
+        "path": "",
+        "metadata": false,
+        "x": 230,
+        "y": 600,
+        "wires": [
+            [
+                "9c87015d.a1203"
+            ]
+        ]
+    },
+    {
+        "id": "c9f4f595.a89bc8",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "Gyro 2 Roll",
+        "links": [
+            "5aaea9ef.4ce528"
+        ],
+        "x": 630,
+        "y": 560,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "5aaea9ef.4ce528",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "Gyro 2 Roll carrier",
+        "links": [
+            "c9f4f595.a89bc8"
+        ],
+        "x": 210,
+        "y": 680,
+        "wires": [
+            [
+                "9e22bba.06b7648",
+                "b3c75872.7ef9e8"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "7820a8cb.f081a8",
+        "type": "link in",
+        "z": "586ca96d.c55028",
+        "name": "Sonic Pi RPi",
+        "links": [
+            "6c07f3b.8f8e80c"
+        ],
+        "x": 450,
+        "y": 180,
+        "wires": [
+            [
+                "b6b587c.af62878"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "b8efc41c.f07468",
+        "type": "inject",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "topic": "",
+        "payload": "0",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 110,
+        "y": 980,
+        "wires": [
+            [
+                "ff8ad7ad.473268",
+                "92fe61aa.f778d",
+                "1202316c.36e95f",
+                "37f92160.40db1e",
+                "5acfe4a9.083b2c",
+                "f29cf122.b629f",
+                "f335deb6.da087"
+            ]
+        ]
+    },
+    {
+        "id": "7b15b99c.557cf8",
+        "type": "inject",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "topic": "",
+        "payload": "1",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 550,
+        "y": 980,
+        "wires": [
+            [
+                "1fcb6769.7d4af9",
+                "92c12ff6.a3431",
+                "76d49f30.98bd3",
+                "e4ec860a.bb4748",
+                "46f132ce.607b5c",
+                "16a00045.17849",
+                "b39c0fe7.2392",
+                "eeeddc20.a566a",
+                "fa4d2630.08a088",
+                "c95cb0b6.705ed"
+            ]
+        ]
+    },
+    {
+        "id": "ff8ad7ad.473268",
+        "type": "ui_text_input",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Tempoffset",
+        "tooltip": "",
+        "group": "b81eb4b0.c3f5a8",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "",
+        "x": 290,
+        "y": 1040,
+        "wires": [
+            [
+                "8a78388e.bfc528"
+            ]
+        ]
+    },
+    {
+        "id": "92fe61aa.f778d",
+        "type": "ui_text_input",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Humoffset",
+        "tooltip": "",
+        "group": "b81eb4b0.c3f5a8",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 290,
+        "y": 1080,
+        "wires": [
+            [
+                "f8eedcf7.a5fb"
+            ]
+        ]
+    },
+    {
+        "id": "1202316c.36e95f",
+        "type": "ui_text_input",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Lightoffset",
+        "tooltip": "",
+        "group": "b81eb4b0.c3f5a8",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 290,
+        "y": 1120,
+        "wires": [
+            [
+                "88ee2ff5.68f7c"
+            ]
+        ]
+    },
+    {
+        "id": "37f92160.40db1e",
+        "type": "ui_text_input",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Noiseoffset",
+        "tooltip": "",
+        "group": "b81eb4b0.c3f5a8",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 290,
+        "y": 1160,
+        "wires": [
+            [
+                "3e0ec09c.de08b"
+            ]
+        ]
+    },
+    {
+        "id": "3907470a.3915d8",
+        "type": "ui_text_input",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Pressoffset",
+        "tooltip": "",
+        "group": "b81eb4b0.c3f5a8",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 290,
+        "y": 1200,
+        "wires": [
+            [
+                "f09cd08d.082c6"
+            ]
+        ]
+    },
+    {
+        "id": "5acfe4a9.083b2c",
+        "type": "ui_text_input",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Pm1offset",
+        "tooltip": "",
+        "group": "b81eb4b0.c3f5a8",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 280,
+        "y": 1240,
+        "wires": [
+            [
+                "14abd863.16ec08"
+            ]
+        ]
+    },
+    {
+        "id": "f29cf122.b629f",
+        "type": "ui_text_input",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Pm2.5offset",
+        "tooltip": "",
+        "group": "b81eb4b0.c3f5a8",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 290,
+        "y": 1280,
+        "wires": [
+            [
+                "a483983d.e1ddd8"
+            ]
+        ]
+    },
+    {
+        "id": "f335deb6.da087",
+        "type": "ui_text_input",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Pm10offset",
+        "tooltip": "",
+        "group": "b81eb4b0.c3f5a8",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 290,
+        "y": 1320,
+        "wires": [
+            [
+                "f6d0888d.fa5148"
+            ]
+        ]
+    },
+    {
+        "id": "1c3c42b9.4ada0d",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "Wekinator In",
+        "links": [
+            "9874a4.ef0ecb6"
+        ],
+        "x": 570,
+        "y": 600,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "7e1e42c.670b0bc",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "Wekinator out",
+        "links": [
+            "9aca9ded.27903"
+        ],
+        "x": 750,
+        "y": 600,
+        "wires": [
+            []
+        ],
+        "l": true
+    },
+    {
+        "id": "5f49a6ed.f047f8",
+        "type": "udp out",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "addr": "127.0.0.1",
+        "iface": "",
+        "port": "9000",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 550,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "e26295c.af97b68",
+        "type": "osc",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "path": "",
+        "metadata": false,
+        "x": 390,
+        "y": 1540,
+        "wires": [
+            [
+                "5f49a6ed.f047f8"
+            ]
+        ]
+    },
+    {
+        "id": "9874a4.ef0ecb6",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "Wekinator",
+        "links": [
+            "1c3c42b9.4ada0d"
+        ],
+        "x": 260,
+        "y": 1540,
+        "wires": [
+            [
+                "e26295c.af97b68"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "291aff82.7b29c",
+        "type": "udp in",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "iface": "",
+        "port": "9001",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 800,
+        "y": 1540,
+        "wires": [
+            [
+                "6196c871.010b98"
+            ]
+        ]
+    },
+    {
+        "id": "6196c871.010b98",
+        "type": "osc",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "path": "",
+        "metadata": false,
+        "x": 930,
+        "y": 1540,
+        "wires": [
+            [
+                "9aca9ded.27903"
+            ]
+        ]
+    },
+    {
+        "id": "9aca9ded.27903",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "Wekinator",
+        "links": [
+            "7e1e42c.670b0bc"
+        ],
+        "x": 1060,
+        "y": 1540,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "e579c09f.71e67",
+        "type": "comment",
+        "z": "fc2fa622.557b98",
+        "name": "OSC",
+        "info": "",
+        "x": 90,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "9c87015d.a1203",
+        "type": "switch",
+        "z": "fc2fa622.557b98",
+        "name": "Roll Pitch Yaw Divider",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "/gyro2/roll",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "/gyro2/pitch",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "/gyro2/yaw",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 400,
+        "y": 600,
+        "wires": [
+            [
+                "c9f4f595.a89bc8",
+                "f07aa278.2d9b5"
+            ],
+            [
+                "1826d42.167372c"
+            ],
+            [
+                "76c0150e.b888dc"
+            ]
+        ]
+    },
+    {
+        "id": "1826d42.167372c",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "Gyro 2 Pitch",
+        "links": [
+            "e26fd77b.704478"
+        ],
+        "x": 630,
+        "y": 600,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "76c0150e.b888dc",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "Gyro 2 Yaw",
+        "links": [
+            "51d7fbc.aaf0104"
+        ],
+        "x": 630,
+        "y": 640,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "e26fd77b.704478",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "Gyro 2 Pitch carrier",
+        "links": [
+            "1826d42.167372c"
+        ],
+        "x": 210,
+        "y": 720,
+        "wires": [
+            [
+                "42a43282.3b3c8c",
+                "a7a3270a.ad0578"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "51d7fbc.aaf0104",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "Gyro 2 Yaw carrier",
+        "links": [
+            "e3ac85fd.a77c68",
+            "76c0150e.b888dc"
+        ],
+        "x": 210,
+        "y": 760,
+        "wires": [
+            [
+                "87d32b6.7b4f3d8",
+                "90646923.bab2d8"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "2bffa6b7.355f7a",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "temp",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "d47fb62.d3b1048",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "hum",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "93ed0766.a54b08",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "light",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "51cfac29.9827c4",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "noise",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "87574a8b.63aa38",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "press",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d4d4ac04.c36ee",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "pmone",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ffb26558.63a1d8",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "pmtwofive",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 960,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "428bccd3.1103d4",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "pmten",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 950,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "f07aa278.2d9b5",
+        "type": "debug",
+        "z": "fc2fa622.557b98",
+        "name": " Gyro 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 610,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "6c07f3b.8f8e80c",
+        "type": "link out",
+        "z": "33a05456.7ec3cc",
+        "name": "Sonic Pi on RPi",
+        "links": [
+            "7820a8cb.f081a8"
+        ],
+        "x": 1200,
+        "y": 140,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "c4597a97.989ab8",
+        "type": "udp in",
+        "z": "fc2fa622.557b98",
+        "name": "",
+        "iface": "",
+        "port": "8001",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "buffer",
+        "x": 100,
+        "y": 800,
+        "wires": [
+            [
+                "62838e34.b2c12"
+            ]
+        ]
+    },
+    {
+        "id": "62838e34.b2c12",
+        "type": "osc",
+        "z": "fc2fa622.557b98",
+        "name": "",
+        "path": "",
+        "metadata": false,
+        "x": 230,
+        "y": 800,
+        "wires": [
+            [
+                "5b4dfbfb.d36a54"
+            ]
+        ]
+    },
+    {
+        "id": "5b4dfbfb.d36a54",
+        "type": "switch",
+        "z": "fc2fa622.557b98",
+        "name": "Roll Pitch Yaw Divider",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "/gyro3/roll",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "/gyro3/pitch",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "/gyro3/yaw",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 400,
+        "y": 800,
+        "wires": [
+            [
+                "fb996784.b28408",
+                "2c75f653.259d6a"
+            ],
+            [
+                "e6f0788c.6278c8"
+            ],
+            [
+                "e3ac85fd.a77c68"
+            ]
+        ]
+    },
+    {
+        "id": "fb996784.b28408",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "Gyro 3 Roll",
+        "links": [
+            "f1ab1ee9.2a7b2"
+        ],
+        "x": 630,
+        "y": 760,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "e6f0788c.6278c8",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "Gyro 3 Pitch",
+        "links": [
+            "d1da8596.647a88"
+        ],
+        "x": 630,
+        "y": 800,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "e3ac85fd.a77c68",
+        "type": "link out",
+        "z": "fc2fa622.557b98",
+        "name": "Gyro 3 Yaw",
+        "links": [
+            "51d7fbc.aaf0104",
+            "654dbe8b.131e3"
+        ],
+        "x": 630,
+        "y": 840,
+        "wires": [],
+        "l": true
+    },
+    {
+        "id": "2c75f653.259d6a",
+        "type": "debug",
+        "z": "fc2fa622.557b98",
+        "name": "Gyro 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 610,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "8a87ed04.1d3a",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "low",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "x": 820,
+        "y": 160,
+        "wires": [
+            [
+                "2bffa6b7.355f7a"
+            ]
+        ]
+    },
+    {
+        "id": "8cd4fd65.00fea",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "temp",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 370,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "296eec02.e3e294",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "hum",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 370,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "9d0f359.cb90dc8",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "light",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 370,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "749908a8.d97648",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "noise",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 370,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "dbf6c14d.a2114",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "press",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 370,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "dc0b9ce6.ebf96",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "pmone",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 370,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f892f3fe.e6c84",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 7,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "pmtwofive",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 380,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "709fd6a8.9cb7a8",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 8,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "pmten",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 370,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b3c75872.7ef9e8",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply",
+        "func": "var one = global.get(\"gyro2rollfac\")\nvar two = global.get(\"gyro2rolloff\")\nbbal = (msg.payload + two) * one;\nbbbal = bbal.toFixed(0);\nmsg.payload = parseInt(bbbal);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 680,
+        "wires": [
+            [
+                "77bdc0cd.e2fc5"
+            ]
+        ]
+    },
+    {
+        "id": "a2d7cd13.b011",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Gyro 2 Roll",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 910,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "77bdc0cd.e2fc5",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "sd",
+        "count": "10",
+        "round": "2",
+        "mult": "single",
+        "x": 740,
+        "y": 680,
+        "wires": [
+            [
+                "a2d7cd13.b011",
+                "b8cc9f51.6e55"
+            ]
+        ]
+    },
+    {
+        "id": "9e22bba.06b7648",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 10,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Gyro 2 Roll",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 390,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "cadcafa6.e35bd",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "low",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "x": 820,
+        "y": 200,
+        "wires": [
+            [
+                "d47fb62.d3b1048"
+            ]
+        ]
+    },
+    {
+        "id": "e13218f1.745cc8",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "low",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "x": 820,
+        "y": 240,
+        "wires": [
+            [
+                "93ed0766.a54b08"
+            ]
+        ]
+    },
+    {
+        "id": "6de31c8c.ad9904",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "low",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "x": 820,
+        "y": 280,
+        "wires": [
+            [
+                "51cfac29.9827c4"
+            ]
+        ]
+    },
+    {
+        "id": "20141b5a.6a9e84",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "low",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "x": 820,
+        "y": 320,
+        "wires": [
+            [
+                "87574a8b.63aa38"
+            ]
+        ]
+    },
+    {
+        "id": "a168c90.b944c38",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "low",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "x": 820,
+        "y": 360,
+        "wires": [
+            [
+                "d4d4ac04.c36ee"
+            ]
+        ]
+    },
+    {
+        "id": "46f152da.a0aebc",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "low",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "x": 820,
+        "y": 400,
+        "wires": [
+            [
+                "ffb26558.63a1d8"
+            ]
+        ]
+    },
+    {
+        "id": "782c0c9.e87f9f4",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "low",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "x": 820,
+        "y": 440,
+        "wires": [
+            [
+                "428bccd3.1103d4"
+            ]
+        ]
+    },
+    {
+        "id": "a7a3270a.ad0578",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply",
+        "func": "var one = global.get(\"gyro2pitchfac\")\nvar two = global.get(\"gyro2pitchoff\")\nbbal = (msg.payload + two) * one;\nbbbal = bbal.toFixed(0);\nmsg.payload = parseInt(bbbal);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 720,
+        "wires": [
+            [
+                "ecc23b4b.86be78"
+            ]
+        ]
+    },
+    {
+        "id": "eed8f89e.03c5c8",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 10,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Gyro 2 Pitch",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 910,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "ecc23b4b.86be78",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "high",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "x": 740,
+        "y": 720,
+        "wires": [
+            [
+                "b8cc9f51.6e55",
+                "eed8f89e.03c5c8"
+            ]
+        ]
+    },
+    {
+        "id": "42a43282.3b3c8c",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 11,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Gyro 2 Pitch",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 390,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "90646923.bab2d8",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply",
+        "func": "var one = global.get(\"gyro2yawfac\")\nvar two = global.get(\"gyro2yawoff\")\nbbal = (msg.payload + two) * one;\nbbbal = bbal.toFixed(0);\nmsg.payload = parseInt(bbbal);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 760,
+        "wires": [
+            [
+                "8891d986.28d1a8"
+            ]
+        ]
+    },
+    {
+        "id": "da2d2474.367238",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 11,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Gyro 2 Yaw",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 910,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "8891d986.28d1a8",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "sd",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "x": 740,
+        "y": 760,
+        "wires": [
+            [
+                "da2d2474.367238"
+            ]
+        ]
+    },
+    {
+        "id": "87d32b6.7b4f3d8",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 12,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Gyro 2 Yaw",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 390,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "37836465.32906c",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to Gyro 2 Roll",
+        "rules": [
+            {
+                "t": "set",
+                "p": "gyro2rolloff",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b950b511.a6d868",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to Gyro 2 Pitch",
+        "rules": [
+            {
+                "t": "set",
+                "p": "gyro2pitchoff",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2b10914c.5afe5e",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to Gyro 2 Yaw",
+        "rules": [
+            {
+                "t": "set",
+                "p": "gyro2yawoff",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c95cb0b6.705ed",
+        "type": "ui_numeric",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Gyro 2 Yawfactor",
+        "tooltip": "",
+        "group": "9f92142c.0c7d88",
+        "order": 11,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "step": "0.1",
+        "x": 750,
+        "y": 1440,
+        "wires": [
+            [
+                "316a899c.64f286"
+            ]
+        ]
+    },
+    {
+        "id": "fa4d2630.08a088",
+        "type": "ui_numeric",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Gyro 2 Pitchfactor",
+        "tooltip": "",
+        "group": "9f92142c.0c7d88",
+        "order": 10,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "step": "0.1",
+        "x": 750,
+        "y": 1400,
+        "wires": [
+            [
+                "7f64d025.1902c"
+            ]
+        ]
+    },
+    {
+        "id": "eeeddc20.a566a",
+        "type": "ui_numeric",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Gyro 2 Rollfactor",
+        "tooltip": "",
+        "group": "9f92142c.0c7d88",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "wrap": false,
+        "passthru": true,
+        "topic": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "step": "0.1",
+        "x": 750,
+        "y": 1360,
+        "wires": [
+            [
+                "83c5097d.0fbff8"
+            ]
+        ]
+    },
+    {
+        "id": "83c5097d.0fbff8",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to Gyro 2 Roll",
+        "rules": [
+            {
+                "t": "set",
+                "p": "gyro2rollfac",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 1360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7f64d025.1902c",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to Gyro 2 Pitch",
+        "rules": [
+            {
+                "t": "set",
+                "p": "gyro2pitchfac",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 980,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "316a899c.64f286",
+        "type": "change",
+        "z": "33a05456.7ec3cc",
+        "name": "save to Gyro 2 Yaw",
+        "rules": [
+            {
+                "t": "set",
+                "p": "gyro2yawfac",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a0be9fdd.c1043",
+        "type": "ui_text_input",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Gyro 2 Rolloffset",
+        "tooltip": "",
+        "group": "b81eb4b0.c3f5a8",
+        "order": 9,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 310,
+        "y": 1360,
+        "wires": [
+            [
+                "37836465.32906c"
+            ]
+        ]
+    },
+    {
+        "id": "425823a7.d6a21c",
+        "type": "ui_text_input",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Gyro 2 Pitchoffset",
+        "tooltip": "",
+        "group": "b81eb4b0.c3f5a8",
+        "order": 10,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 310,
+        "y": 1400,
+        "wires": [
+            [
+                "b950b511.a6d868"
+            ]
+        ]
+    },
+    {
+        "id": "4016d346.a025dc",
+        "type": "ui_text_input",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "label": "Gyro 2 Yawoffset",
+        "tooltip": "",
+        "group": "b81eb4b0.c3f5a8",
+        "order": 11,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "",
+        "x": 310,
+        "y": 1440,
+        "wires": [
+            [
+                "2b10914c.5afe5e"
+            ]
+        ]
+    },
+    {
+        "id": "641a0dab.c80b64",
+        "type": "udp out",
+        "z": "586ca96d.c55028",
+        "name": "",
+        "addr": "127.0.0.1",
+        "iface": "",
+        "port": "4559",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 870,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b6b587c.af62878",
+        "type": "osc",
+        "z": "586ca96d.c55028",
+        "name": "",
+        "path": "",
+        "metadata": false,
+        "x": 710,
+        "y": 180,
+        "wires": [
+            [
+                "641a0dab.c80b64"
+            ]
+        ]
+    },
+    {
+        "id": "f1ab1ee9.2a7b2",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "Gyro 3 Roll carrier",
+        "links": [
+            "fb996784.b28408"
+        ],
+        "x": 210,
+        "y": 800,
+        "wires": [
+            [
+                "779c3d25.3e2dc4",
+                "36d26c21.0b3da4"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "d1da8596.647a88",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "Gyro 3 Pitch carrier",
+        "links": [
+            "e6f0788c.6278c8"
+        ],
+        "x": 210,
+        "y": 840,
+        "wires": [
+            [
+                "10ff4f2d.950261",
+                "9ef10522.68df78"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "654dbe8b.131e3",
+        "type": "link in",
+        "z": "33a05456.7ec3cc",
+        "name": "Gyro 3 Yaw carrier",
+        "links": [
+            "e3ac85fd.a77c68"
+        ],
+        "x": 210,
+        "y": 880,
+        "wires": [
+            [
+                "ce1d994a.9054c8",
+                "da7a41d6.d9c27"
+            ]
+        ],
+        "l": true
+    },
+    {
+        "id": "36d26c21.0b3da4",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply",
+        "func": "var one = global.get(\"gyro3rollfac\")\nvar two = global.get(\"gyro3rolloff\")\nbbal = (msg.payload + two) * one;\nbbbal = bbal.toFixed(0);\nmsg.payload = parseInt(bbbal);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 800,
+        "wires": [
+            [
+                "786ed7a6.b0b7e8"
+            ]
+        ]
+    },
+    {
+        "id": "9da87d7e.94231",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 12,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Gyro 3 Roll",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 910,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "786ed7a6.b0b7e8",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "sd",
+        "count": "10",
+        "round": "2",
+        "mult": "single",
+        "x": 740,
+        "y": 800,
+        "wires": [
+            [
+                "9da87d7e.94231"
+            ]
+        ]
+    },
+    {
+        "id": "779c3d25.3e2dc4",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 13,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Gyro 3 Roll",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 390,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "9ef10522.68df78",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply",
+        "func": "var one = global.get(\"gyro3pitchfac\")\nvar two = global.get(\"gyro3pitchoff\")\nbbal = (msg.payload + two) * one;\nbbbal = bbal.toFixed(0);\nmsg.payload = parseInt(bbbal);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 840,
+        "wires": [
+            [
+                "21df0831.984bb8"
+            ]
+        ]
+    },
+    {
+        "id": "a773049c.951d08",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 13,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Gyro 3 Pitch",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 910,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "21df0831.984bb8",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "high",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "x": 740,
+        "y": 840,
+        "wires": [
+            [
+                "a773049c.951d08"
+            ]
+        ]
+    },
+    {
+        "id": "10ff4f2d.950261",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 14,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Gyro 3 Pitch",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 390,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "da7a41d6.d9c27",
+        "type": "function",
+        "z": "33a05456.7ec3cc",
+        "name": "get and apply",
+        "func": "var one = global.get(\"gyro3yawfac\")\nvar two = global.get(\"gyro3yawoff\")\nbbal = (msg.payload + two) * one;\nbbbal = bbal.toFixed(0);\nmsg.payload = parseInt(bbbal);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 580,
+        "y": 880,
+        "wires": [
+            [
+                "fc890b62.955c88"
+            ]
+        ]
+    },
+    {
+        "id": "97bb9eba.e62ec",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "4dd9137b.5dc22c",
+        "order": 14,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Gyro 3 Yaw",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 910,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "fc890b62.955c88",
+        "type": "smooth",
+        "z": "33a05456.7ec3cc",
+        "name": "",
+        "property": "payload",
+        "action": "sd",
+        "count": "10",
+        "round": "1",
+        "mult": "single",
+        "x": 740,
+        "y": 880,
+        "wires": [
+            [
+                "97bb9eba.e62ec"
+            ]
+        ]
+    },
+    {
+        "id": "ce1d994a.9054c8",
+        "type": "ui_text",
+        "z": "33a05456.7ec3cc",
+        "group": "41982a9b.5af0e4",
+        "order": 15,
+        "width": 6,
+        "height": 1,
+        "name": "",
+        "label": "Gyro 3 Yaw",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 390,
+        "y": 880,
+        "wires": []
+    }
+]
